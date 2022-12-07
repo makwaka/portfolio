@@ -1,0 +1,460 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: cursive, monospace, sans-serif;
+    background: hsl(205, 100%, 96%);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main-section{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+    .main-section{
+        width: 95vw;
+    }
+}
+
+
+/* Global styles */
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img:not(.logo) {
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: sans-serif;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+
+/* What is displayed when screen is larger than 800px */
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    body {
+        font-size: 1.3rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+
+
+
+}
+
+
+
+
+                  nav {
+                      background: transparent;
+                  }
+
+                  .nav-bar {
+                      margin: 0 auto;
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                  }
+
+                  .nav-toggle {
+                      display: none;
+                  }
+
+                  .links-container {
+                      height: auto !important;
+                  }
+
+                  .links {
+                      display: flex;
+                  }
+
+                  .links a {
+                      background: transparent;
+                      color: gray;
+                      font-size: 1.1rem;
+                      text-transform: capitalize;
+                      letter-spacing: 1px;
+                      display: block;
+                      transition: all .3s linear;
+                      font-weight: bold;
+                      padding: 0.75rem 0;
+                      margin: 0 5px;
+                  }
+
+                  .links a:hover {
+                      color: blue;
+                      animation: bounce 1s;
+                  }
+
+
+
+
+
+
+
+
+
+#skills p:hover{
+            animation: bounce 1s;
+}
+
+/* #about,
+#contacts,
+#projects{
+    height: 80vh;
+} */
+
+
+
+.nav-toggle{
+    font-size: 1.5rem;
+    background: white;
+        color: black;
+    border-color: transparent;
+    transform: all .3s linear;
+    cursor: pointer;
+}
+
+.nav-toggle:hover{
+    background: blue;
+    color: black;
+}
+
+
+/* style the navbar */
+.links-container{
+    overflow: hidden;
+    height: 0;
+    transition: all .3s linear;
+}
+
+/* To be added in Javascript on click of nav-toggle */
+.show-links{
+    height: 200px;
+}
+
+
+/* Arrow up */
+.top-link {
+    font-size: 3rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    color: blue;
+    animation: bounce 2s ease-in-out infinite;
+    /* visibility: hidden;
+    z-index: -100; */
+}
+
+@keyframes bounce {
+    0%,100% {
+        transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+  }
+}
+
+
+.top-img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+#contact ul a {
+
+color: red;
+}
+
+#contact .btn {
+    text-transform: uppercase;
+    background: transparent;
+    padding: 0.9rem 0.7rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: all .3s linear;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 10px 3px blueviolet;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    margin: 1.5rem;
+}
+
+
+
+.btn:hover {
+    color: white;
+    background: cyan;
+    padding: 0.7rem 0.5rem;
+}
+
+img{
+    display: block;
+}
+
+.cta-button {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: all .3s linear;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+
+}
+
+.image-container {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.image-container:hover .cta-button{
+    visibility: visible;
+    opacity: 1;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius:0 0 20px 20px;
+    position:relative;
+}
+
+
+.description{
+    display: grid;
+    margin-bottom: 2em;
+
+}
+
+#about{
+    background: darkcyan;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 5px red;
+    margin-bottom: 2em;
+}
+
+
+.projects-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1em;
+            width: 90vw;
+        margin: 0 auto;
+        max-width: 1170px;
+
+}
+
+
+#projects {
+    display: grid;
+    margin: 2rem 0;
+}
+
+#projects h2{
+color: grey;
+}
+
+.web-links{
+    position: relative;
+}
+
+.myImage{
+    position: relative;
+}
+
+.web-links img{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.myText{
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    height: 300px;
+        width: 300px;
+        border-radius: 20px;
+        visibility: hidden;
+        opacity: 0;
+        /* transition effect. not necessary */
+        transition: opacity .2s, visibility .2s;
+}
+
+.myText{
+    backdrop-filter: blur(2px);
+}
+
+/* show class to be added in JS */
+.web-links:hover .myText  {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.myText a{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* target every child related to my text. Let the text move up 20px although it won't be seen the visibility is hidden*/
+.myText > *{
+    transform: translateY(20px);
+    transition: transform .25s;
+}
+
+/* on hover let the text appear at Y =0 to form a good transformation */
+.web-links:hover .myText >*{
+    transform: translateY(0);
+}
+
+
+
+/* @keyframes moveFromLeft {
+    0%{
+        left: 0;
+        transform: rotate(0deg) scale(1);
+    }
+
+    100%{
+        left: 50%;
+        transform: rotate(360deg) scale(1.5);
+    }
+} */
+
+
+/* footer */
+
+footer{
+    background-color: grey;
+    color: #fff;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+}
+
+
+footer ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer a{
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer #email{
+    font-size: 10px;
+}
+
+@media screen and (max-width:730px){
+.projects-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .links img{
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+#contact .btn {
+    padding: 0.5rem 0.75rem;
+    letter-spacing: 0;
+    display: inline-flex;
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+    margin: 0.5rem;
+}
+
+}
